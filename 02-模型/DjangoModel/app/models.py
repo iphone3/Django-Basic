@@ -17,10 +17,12 @@ class Goods(models.Model):
     # 名称
     g_name = models.CharField(max_length=255, default='')
     # 价格
-    g_price = models.FloatField(default=0)
+    g_price = models.DecimalField(max_digits=10,decimal_places=2)
     # 是否删除 (逻辑删除)
     is_del = models.BooleanField(default=False)
     # 创建时间
     create_time = models.DateField(auto_now_add=True, null=True)
     # 修改时间
     change_time = models.DateTimeField(auto_now=True, null=True)
+    # 测试字段
+    img = models.CharField(null=True, max_length=100)
