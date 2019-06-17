@@ -6,9 +6,10 @@ from django.db import models
 class Student(models.Model):
     # 名字
     name = models.CharField(max_length=100)
-    # 成绩
-    score = models.IntegerField()
-
+    # 数学成绩
+    math = models.IntegerField(default=0)
+    # 英语成绩
+    english = models.IntegerField(default=0)
 
 # 商品模型类
 class Goods(models.Model):
@@ -26,3 +27,4 @@ class Goods(models.Model):
     change_time = models.DateTimeField(auto_now=True, null=True)
     # 测试字段
     img = models.CharField(null=True, max_length=100)
+

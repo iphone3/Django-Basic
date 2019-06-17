@@ -8,4 +8,9 @@ urlpatterns = [
     url(r'^getstu/$', views.getStudents),
     url(r'^addgoods/$', views.addGoods),
     url(r'^changegoods/$', views.changegoods),
+    url(r'^showgoods/$', views.showgoods),
+    url(r'^getgoods/$', views.getgoods),
+    url(r'^aggregatetest/$', views.aggregatetest),
+    url(r'^qtest/$', views.qtest),
+    url(r'^ftest/$', views.ftest),
 ]
