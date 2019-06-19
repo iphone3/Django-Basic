@@ -5,7 +5,7 @@ from django.db.models import Max, Min, Avg
 from django.db.models import Q
 from django.http import HttpResponse
 from django.shortcuts import render
-from app.models import Student, Goods
+from app.models import Student, Goods, GoodsManager
 
 
 def index(request):
@@ -48,10 +48,15 @@ def addGoods(request):
 
     return HttpResponse('添加商品成功: ' + goods.g_name)
 
+# 删除商品
+def delgoods(request):
+    goods = Goods.objects.first()
+    goods.delete()
+
+    return HttpResponse('删除数据成功')
 
 # 修改商品
 def changegoods(request):
-
     # 查询
     goods = Goods.objects.first()
 
@@ -68,7 +73,12 @@ def changegoods(request):
 def showgoods(request):
 
     # all()
+    # goods_list = Goods.objects.all() # 将已经删除的排除
+    # goods_list = Goods.objects.filter(is_del=False)
+
+    goods_list = Goods.goodsObjects.all()
     # goods_list = Goods.objects.all()
+
 
     # filter() 符合要求的
     # goods_list = Goods.objects.filter(g_id=3)
@@ -88,13 +98,13 @@ def showgoods(request):
 
     # 排序
     # goods_list = Goods.objects.order_by('g_price')  # 升序
-    goods_list = Goods.objects.order_by('-g_price')  # 升序
+    # goods_list = Goods.objects.order_by('-g_price')  # 升序
 
     # 包含
     # goods_list = Goods.objects.filter(g_id__in=[3,5,7,10])
 
     # 切片
-    goods_list = Goods.objects.order_by('g_price')[0:3]
+    # goods_list = Goods.objects.order_by('g_price')[0:3]
 
     temp = ''
     for goods in goods_list:

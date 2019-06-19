@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^aggregatetest/$', views.aggregatetest),
     url(r'^qtest/$', views.qtest),
     url(r'^ftest/$', views.ftest),
+    url(r'^delgoods/$', views.delgoods),
 ]

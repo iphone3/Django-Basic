@@ -12,6 +12,10 @@ class Student(models.Model):
     english = models.IntegerField(default=0)
 
 # 商品模型类
+class GoodsManager(models.Manager):
+    def get_queryset(self):
+        return super(GoodsManager, self).get_queryset().filter(is_del=False)
+
 class Goods(models.Model):
     # 主键
     g_id = models.AutoField(primary_key=True)
@@ -28,3 +32,12 @@ class Goods(models.Model):
     # 测试字段
     img = models.CharField(null=True, max_length=100)
 
+    class Meta:
+        db_table = 'goods'
+        # ordering = ['g_price']
+        # ordering = ['-g_price']
+
+    # 自定义
+    goodsObjects = GoodsManager()
+    # 系统
+    objects = models.Manager()
