@@ -40,12 +40,16 @@ def index(request):
     # 新闻列表信息
     news_list = News.objects.all()
 
+    # ifequal的使用
+    active = 'index'
+
     context = {
         'name': username,
         'age': age,
         'names':names,
         'user_list': user_list,
-        'news_list':news_list
+        'news_list':news_list,
+        'active': active
     }
 
     return render(request, 'index.html', context=context)

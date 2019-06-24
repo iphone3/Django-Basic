@@ -112,7 +112,65 @@
         </div>
     </div>
 {% endfor %}
+<br>
 
+<h3>标签comment</h3>
+<p>
+    comment多行注释
+</p>
+<br>
+
+
+<h3>标签ifequal、ifnotequal</h3>
+<p>
+    {% ifequal name 'root' %}
+        超级用户...
+    {% endifequal %}
+</p>
+<p>
+    {% ifnotequal '八年级(1)班' '八年级(2)班' %}
+        张三和李四不在同一个班级
+    {% else %}
+        张三和李四在同一个班级
+    {% endifnotequal %}
+</p>
+<br>
+
+
+<style>
+    ul{
+        overflow: hidden;
+        list-style: none;
+    }
+    li{
+        float: left;
+        width: 80px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid gray;
+        margin: 5px;
+    }
+    .active{
+        background: red;
+        border-color: red;
+        color: white;
+    }
+</style>
+<ul>
+    <li class="
+        {% ifequal active 'index' %}
+            active
+        {% endifequal %}
+    ">首页</li>
+
+    <li>购物车</li>
+    <li>我的</li>
+    <li>分类</li>
+    <li>设置</li>
+</ul>
+<br>
+<br>
 
 </body>
 </html>
