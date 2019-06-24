@@ -56,6 +56,29 @@
 <hr>
 
 
+<h3>标签for基本使用</h3>
+{% for item in names %}
+    <p>
+        名字: {{ item }}
+    </p>
+{% endfor %}
+
+{% for user in user_list %}
+    <div>
+        <span>{{ forloop.counter }}-</span>
+        <span>用户名: {{ user.username }}</span>
+        <span>成绩: {{ user.score }}分</span>
+        <span>年龄: {{ user.age }}岁</span>
+    </div>
+{% empty %}
+    <p>
+        提示: 用户列表是空的!
+    </p>
+{% endfor %}
+<br>
+
+
+
 
 </body>
 </html>
