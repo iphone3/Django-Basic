@@ -8,13 +8,54 @@
 
 <h1>Hello Django!</h1>
 <h2>Template学习...</h2>
+<hr>
 
-<p>
-    用户名: {{ name }}
-</p>
+
+<h3> 模板中变量使用 </h3>
 <p>
     年龄: {{ age }} 岁
 </p>
+
+<p>
+    成绩: {{ math }}
+</p>
+<hr>
+
+
+
+<h3> 模板中 if </h3>
+<!-- HTML语法 -->
+{# 模板注释 #}
+{% if name %}
+    <p>
+        用户名: {{ name }}
+    </p>
+{% else %}
+    <p>
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+    </p>
+{% endif %}
+
+{# root超级用户 #}
+{% if name == 'root' %}
+    <p style="color: red;">
+        超级管理员!
+    </p>
+{% elif name %}
+    <p>
+        用户名: {{ name }}
+    </p>
+{% else %}
+    <p>
+        用户未登录! 请
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+    </p>
+{% endif %}
+<hr>
+
+
 
 </body>
 </html>

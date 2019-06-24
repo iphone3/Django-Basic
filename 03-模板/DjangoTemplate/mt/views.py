@@ -5,7 +5,12 @@ from django.shortcuts import render
 def index(request):
 
     # 用户名
-    username = 'atom'
+    username = 'root'
     age = 18
 
-    return render(request, 'index.html', context={'name': username, 'age': age})
+    context = {
+        'name': username,
+        'age': age,
+    }
+
+    return render(request, 'index.html', context=context)
