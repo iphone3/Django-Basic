@@ -78,6 +78,40 @@
 <br>
 
 
+<h3>新闻列表</h3>
+<style>
+    .news{
+        border:1px solid gray;
+        height: 140px;
+        margin:5px;
+    }
+
+    .news .news-img{
+        float: left;
+        width: 240px;
+        height: 100%;
+        margin-right:10px;
+    }
+    .news .news-img img{
+        width: 100%;
+    }
+
+    .news .news-main{
+        float: left;
+    }
+</style>
+{% for news in news_list %}
+    <div class="news">
+        <div class="news-img">
+            <img src="{{ news.img }}" alt="">
+        </div>
+        <div class="news-main">
+            <h4>{{ news.title }}</h4>
+            <p>{{ news.detail }}</p>
+            <span>{{ news.username }}</span>
+        </div>
+    </div>
+{% endfor %}
 
 
 </body>

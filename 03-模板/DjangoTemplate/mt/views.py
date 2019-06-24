@@ -2,6 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from mt.models import News
+
+
 def index(request):
 
     # 用户名
@@ -34,11 +37,15 @@ def index(request):
     ]
 
 
+    # 新闻列表信息
+    news_list = News.objects.all()
+
     context = {
         'name': username,
         'age': age,
         'names':names,
-        'user_list': user_list
+        'user_list': user_list,
+        'news_list':news_list
     }
 
     return render(request, 'index.html', context=context)
