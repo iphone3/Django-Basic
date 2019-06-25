@@ -205,9 +205,36 @@
 {% include 'main_shop.html' with shop_title=shop_title2 shop_list=shop_list2 %}
 <br>
 
+<h3>HTML转义</h3>
+<p>
+    语法: {{ html_str }}
+</p>
+<p>
+    效果: {{ html_str|safe }}
+</p>
+<p>
+    效果:
+    {% autoescape off %}
+        {{ html_str }}
+    {% endautoescape %}
+</p>
 
-<h3>标签 url</h3>
-{% include 'nav.html' %}
+
+
+<h3>CSRF问题</h3>
+<form action="{% url 'mt:login' %}" method="post">
+    {% csrf_token %}
+    
+    <p>
+        用户名: <input type="text" name="username">
+    </p>
+    <p>
+        密码: <input type="password" name="password">
+    </p>
+    <p>
+        <input type="submit" value="登录">
+    </p>
+</form>
 
 </body>
 </html>

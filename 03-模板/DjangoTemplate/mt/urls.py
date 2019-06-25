@@ -10,5 +10,5 @@ urlpatterns = [
     url(r'^setting/$', views.setting, name='setting'),    # 设置
     url(r'^test/$', views.test, name='test'),   # 继承测试
     url(r'^test2/$', views.test2, name='test2'),   # 继承测试
+    url(r'^login/$', views.login, name='login'),    # 登录
 ]
-

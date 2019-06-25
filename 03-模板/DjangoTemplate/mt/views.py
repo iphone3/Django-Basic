@@ -55,6 +55,9 @@ def index(request):
     shop_title2 = '手机'
     shop_list2 = ['苹果', '华为', 'OPPO']
 
+    # 转义
+    html_str = '<b> b标签的使用 </b>'
+
     context = {
         'name': username,
         'age': age,
@@ -67,7 +70,8 @@ def index(request):
         'shop_title1':shop_title1,
         'shop_list1':shop_list1,
         'shop_title2':shop_title2,
-        'shop_list2':shop_list2
+        'shop_list2':shop_list2,
+        'html_str':html_str
     }
 
     return render(request, 'index.html', context=context)
@@ -96,3 +100,7 @@ def test(request):
 
 def test2(request):
     return render(request, 'test2.html')
+
+
+def login(request):
+    return HttpResponse('登录成功')
