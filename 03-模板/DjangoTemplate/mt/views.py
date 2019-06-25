@@ -88,3 +88,11 @@ def sort(request):
 
 def setting(request):
     return render(request, 'setting.html', context={'active':'setting'})
+
+
+def test(request):
+    return render(request, 'test.html')
+
+
+def test2(request):
+    return render(request, 'test2.html')

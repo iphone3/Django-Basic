@@ -207,47 +207,7 @@
 
 
 <h3>标签 url</h3>
-<ul>
-    <li class="
-        {% ifequal active 'index' %}
-            active
-        {% endifequal %}
-    ">
-        <a href="{% url 'mt:index' %}">首页</a>
-    </li>
-
-    <li class="
-        {% ifequal active 'cart' %}
-            active
-        {% endifequal %}
-    ">
-        <a href="{% url 'mt:cart' %}">购物车</a>
-    </li>
-
-    <li class="
-        {% ifequal active 'mine' %}
-            active
-        {% endifequal %}
-    ">
-        <a href="{% url 'mt:mine' %}">我的</a>
-    </li>
-
-    <li class="
-        {% ifequal active 'sort' %}
-            active
-        {% endifequal %}
-    ">
-        <a href="{% url 'mt:sort' %}">分类</a>
-    </li>
-
-    <li class="
-        {% ifequal active 'setting' %}
-            active
-        {% endifequal %}
-    ">
-        <a href="{% url 'mt:setting' %}">设置</a>
-    </li>
-</ul>
+{% include 'nav.html' %}
 
 </body>
 </html>
