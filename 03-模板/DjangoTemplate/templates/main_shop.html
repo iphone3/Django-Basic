@@ -1,0 +1,13 @@
+<style>
+    .main_shop{
+        background: red;
+        color: white;
+    }
+</style>
+
+<div class="main_shop">
+    <h4>{{ shop_title }}</h4>
+    {% for item in shop_list1 %}
+        <p>{{ item }}</p>
+    {% endfor %}
+</div>

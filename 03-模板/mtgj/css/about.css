@@ -1,0 +1,65 @@
+#main .content{
+	width: 1141px;
+	margin: 0 auto;
+}
+#main .content .section1{
+	/*width: 1141px;*/
+	width: 735px;
+	/*height: 320px;*/
+	height: 226px;
+	/*background: red;*/
+	padding-top: 94px;
+	background: url(../img/img3.png) no-repeat left bottom;
+	padding-left: 405px;
+}
+#main .content .section1 h3{
+	font-size: 16px;
+	height: 50px;
+}
+#main .content .section1 p{
+	font-size: 14px;
+	line-height: 29px;
+	border-bottom: 1px solid #89898B;
+}
+#main .content .section2{
+	width: 1141px;
+	height: 402px;
+	/*background: blue;*/
+	border-bottom: 1px solid #89898B;
+}
+#main .content .section2 h3{
+	line-height: 78px;
+	font-size: 14px;
+	text-align: center;
+}
+#main .content .section2 li{
+	float: left;
+	width: 340px;
+	text-align: center;
+	font-size: 12px;
+}
+#main .content .section2 img{
+	margin-bottom: 34px;
+}
+#main .content .section3{
+	width: 1141px;
+	height: 984px;
+	/*background: purple;*/
+}
+#main .content .section3 h3{
+	line-height: 86px;
+	font-size: 14px;
+	text-align: center;
+}
+#main .content .section3 .show-box{
+	width: 1141px;
+	overflow: hidden;
+}
+#main .content .section3 .show-box .show{
+	width: 1201px;
+}
+#main .content .section3 .show-box .show img{
+	float: left;
+	margin: 0 59px 59px 0;
+}
+

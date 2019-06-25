@@ -43,13 +43,48 @@ def index(request):
     # ifequal的使用
     active = 'index'
 
+    # 过滤器
+    temp_str = 'hello World!'
+    import datetime
+    now_time = datetime.datetime.now()
+
+
+    # include
+    shop_title1 = '家电'
+    shop_list1 = ['电视', '空调', '洗衣机']
+    shop_title2 = '手机'
+    shop_list2 = ['苹果', '华为', 'OPPO']
+
     context = {
         'name': username,
         'age': age,
         'names':names,
         'user_list': user_list,
         'news_list':news_list,
-        'active': active
+        'active': active,
+        'temp_str':temp_str,
+        'now_time':now_time,
+        'shop_title1':shop_title1,
+        'shop_list1':shop_list1,
+        'shop_title2':shop_title2,
+        'shop_list2':shop_list2
     }
 
     return render(request, 'index.html', context=context)
+
+
+def cart(request):
+
+    return render(request, 'cart.html', context={'active':'cart'})
+
+
+def mine(request):
+    return render(request, 'mine.html', context={'active':'mine'})
+
+
+def sort(request):
+    return render(request, 'sort.html', context={'active':'sort'})
+
+
+def setting(request):
+    return render(request, 'setting.html', context={'active':'setting'})

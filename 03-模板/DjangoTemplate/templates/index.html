@@ -151,9 +151,16 @@
         border: 1px solid gray;
         margin: 5px;
     }
+    li a{
+        color: black;
+        text-decoration: none;
+    }
     .active{
         background: red;
         border-color: red;
+        color: white;
+    }
+    .active a{
         color: white;
     }
 </style>
@@ -171,6 +178,76 @@
 </ul>
 <br>
 <br>
+
+<h3>过滤器</h3>
+<p>
+    {{ temp_str|lower }}
+</p>
+<p>
+    {{ temp_str|upper }}
+</p>
+<p>
+    {{ names|join:' - ' }}
+</p>
+<p>
+    {{ name|default:'游客' }}
+</p>
+<p>
+    当前时间: {{ now_time|date:'y年m月d日' }}
+</p>
+<br>
+
+
+<h3>标签 inlcude</h3>
+{% include 'main_shop.html' with shop_title=shop_title1 shop_list=shop_list1 %}
+{% include 'main_news.html' %}
+{% include 'main_other.html' %}
+{% include 'main_shop.html' with shop_title=shop_title2 shop_list=shop_list2 %}
+<br>
+
+
+<h3>标签 url</h3>
+<ul>
+    <li class="
+        {% ifequal active 'index' %}
+            active
+        {% endifequal %}
+    ">
+        <a href="{% url 'mt:index' %}">首页</a>
+    </li>
+
+    <li class="
+        {% ifequal active 'cart' %}
+            active
+        {% endifequal %}
+    ">
+        <a href="{% url 'mt:cart' %}">购物车</a>
+    </li>
+
+    <li class="
+        {% ifequal active 'mine' %}
+            active
+        {% endifequal %}
+    ">
+        <a href="{% url 'mt:mine' %}">我的</a>
+    </li>
+
+    <li class="
+        {% ifequal active 'sort' %}
+            active
+        {% endifequal %}
+    ">
+        <a href="{% url 'mt:sort' %}">分类</a>
+    </li>
+
+    <li class="
+        {% ifequal active 'setting' %}
+            active
+        {% endifequal %}
+    ">
+        <a href="{% url 'mt:setting' %}">设置</a>
+    </li>
+</ul>
 
 </body>
 </html>

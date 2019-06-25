@@ -1,0 +1,12 @@
+#main .fixBox{
+	width: 1141px;
+	margin: 0 auto;
+	padding: 60px 0 100px 0;
+	overflow: hidden;
+}
+#main .fixBox .content{
+	width: 1181px;
+}
+#main .fixBox .content img{
+	margin: 0 30px 30px 0;
+}

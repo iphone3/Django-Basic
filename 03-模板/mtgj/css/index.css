@@ -1,0 +1,212 @@
+#main .banner{
+	/*width: 1141px;*/
+	height: 458px;
+	background: red;
+	/*margin: 0 auto;*/
+	width: 100%;
+	background: url(../img/banner.png);
+}
+
+#main .stragegic{
+	width: 100%;
+	/*width: 1141px;*/
+	/*height: 386px;*/
+	height: 350px;
+	background: #f7f7f7;
+	margin: 0 auto;
+	padding-top: 36px;
+	text-align: center;
+}
+#main .stragegic .title{
+	font-size: 22px;
+	line-height: 40px;
+	color: black;
+}
+#main .stragegic .detail{
+	font-size: 15px;
+	line-height: 45px;
+	color: #89898B;
+}
+#main .stragegic ul{
+	width: 1134px;
+	margin: 0 auto;
+}
+#main .stragegic li{
+	width: 188px;
+	height: 100px;
+	border: 1px solid #89898B;
+	float: left;
+	margin: -1px 0 0 -1px;
+	text-align: center;
+	color: white;
+}
+#main .stragegic img{
+	display: inline-block;
+	vertical-align: middle;
+}
+#main .stragegic i{
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	width: 0;
+}
+
+#main .our{
+	/*width: 1141px;*/
+	width: 100%;
+	/*height: 545px;*/
+	height: 490px;
+	padding-top: 55px;
+	background: black;
+	margin: 0 auto;
+	text-align: center;
+}
+#main .our .title{
+	color: white;
+	font-size: 24px;
+	line-height: 42px;
+}
+#main .our .detail{
+	font-size: 13px;
+	line-height: 52px;
+	color: white;
+}
+#main .our .show{
+	width: 1141px;
+	/*height: 396px;*/
+	shape-margin: 326px;
+	/*background: red;*/
+	margin: 0 auto;
+	padding-top: 70px;
+}
+#main .our .show .section{
+	width: 342px;
+	/*height: 260px;*/
+	height: 166px;
+	/*background: blue;*/
+	float: left;
+	position: relative;
+	padding-top: 94px;
+	background: #d0d0d0;
+}
+#main .our .show .section i{
+	background: url(../img/img01.png) no-repeat;
+	width: 130px;
+	height: 130px;
+	display: inline-block;
+	border-radius: 50%;
+	position: absolute;
+	left: 105px;
+	top: -65px;
+}
+#main .our .show .section h4{
+	font-size: 17px;
+	color: #f75a53;
+	line-height: 45px;
+}
+#main .our .show .section p{
+	font-size: 13px;
+	line-height: 30px;
+	width: 250px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+#main .success{
+	/*width: 1141px;*/
+	width: 100%;
+	/*height: 810px;*/
+	height: 760px;
+	background: white;
+	margin: 0 auto;
+	padding-top: 50px;
+	text-align: center;
+}
+#main .success .title{
+	font-size: 25px;
+	color: black;
+	line-height: 42px;
+}
+#main .success .detail{
+	font-size: 14px;
+	line-height: 48px;
+	color: #89898B;
+}
+#main .success .select{
+	width: 800px;
+	height: 47px;
+	/*background: red;*/
+	margin: 0 auto 20px;
+}
+#main .success .select a{
+	width: 200px;
+	height: 47px;
+	float: left;
+	color: white;
+	background: url(../img/selectbg.png);
+	line-height: 40px;
+	font-size: 14px;
+}
+#main .success .select .active{
+	background: url(../img/select.png);
+}
+#main .success .fixBox{
+	width: 1141px;
+	height: 604px;
+	/*background: blue;*/
+	overflow: hidden;
+	margin: 0 auto;
+}
+#main .success .fixBox .shop{
+	/* 装不下所有的图片*/
+	width: 1171px;
+	
+}
+#main .success .fixBox .shop a{
+	float: left;
+	margin: 0 30px 30px 0;
+	width: 360px;
+	height: 256px;
+}
+#main .success .fixBox .shop img{
+	width: 360px;
+	height: 256px;
+}
+
+
+#main .news{
+	/*width: 1141px;*/
+	width: 100%;
+	height: 350px;
+	background: #f2f2f2;
+}
+#main .news .news-content{
+	width: 1141px;
+	margin: 0 auto;
+}
+#main .news .section{
+	float: left;
+	width: 345px;
+}
+#main .news .section .title{
+	line-height: 85px;
+	font-size: 17px;
+}
+#main .news .section ul{
+	margin-bottom: 8px;
+}
+#main .news .section ul li{
+	height: 30px;
+	width: 345px;
+}
+#main .news .section ul li a{
+	float: left;
+	font-size: 12px;
+	color: #89898B;
+}
+#main .news .section ul li span{
+	float: right;
+	font-size: 12px;
+	color: #89898B;
+}
+#main .news .section .more{}

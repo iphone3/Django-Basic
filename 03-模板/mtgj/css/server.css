@@ -1,0 +1,13 @@
+#main .content{
+	width: 1141px;
+	margin: 0 auto;
+	padding: 50px 0;
+	
+}
+#main .content .info{
+	margin-bottom: 10px;
+}
+#main .content .info p{
+	height: 28px;
+	font-size: 12px;
+}
