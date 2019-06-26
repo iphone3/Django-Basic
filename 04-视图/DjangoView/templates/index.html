@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+<h1>1、参数基本操作</h1>
+<p>
+    <a href="{% url 'app:detail' 1 %}">商品1</a>
+</p>
+<p>
+{#    <a href="/detail/2/">商品2</a>#}
+    <a href="{% url 'app:detail' 2 %}">商品2</a>
+</p>
+<p>
+{#    <a href="/detail/3/">商品3</a>#}
+    <a href="{% url 'app:detail' 3 %}">商品3</a>
+</p>
+<p>
+{#    <a href="#">商品4</a>#}
+    <a href="{% url 'app:detail' 4 %}">商品4</a>
+</p>
+</body>
+</html>

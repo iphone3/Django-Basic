@@ -224,7 +224,7 @@
 <h3>CSRF问题</h3>
 <form action="{% url 'mt:login' %}" method="post">
     {% csrf_token %}
-    
+
     <p>
         用户名: <input type="text" name="username">
     </p>
