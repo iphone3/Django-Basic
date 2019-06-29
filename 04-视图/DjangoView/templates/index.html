@@ -22,5 +22,15 @@
 {#    <a href="#">商品4</a>#}
     <a href="{% url 'app:detail' 4 %}">商品4</a>
 </p>
+
+<p>
+    <a href="{% url 'app:urlarg' 2 10 '参数传递' %}">URL参数</a>
+</p>
+
+<p>
+{#    <a href="{% url 'app:goods_detail' '家电' 10021 %}">参数传递(定义参数名称)</a>#}
+     <a href="{% url 'app:goods_detail'  goods_id='aa123aa' type_name='家电' %}">参数传递(定义参数名称)</a>
+</p>
+
 </body>
 </html>
