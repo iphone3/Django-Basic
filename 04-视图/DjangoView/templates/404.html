@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404页面</title>
+</head>
+<body>
+
+<h3>
+    404Page Not Found
+</h3>
+<p>
+    页面不存在或被管理员删除， <b>5</b>秒后自动返回首页
+</p>
+<script>
+    var oB = document.getElementsByTagName('b')[0]
+    var oTimer = setInterval(function () {
+        var num = parseInt(oB.innerHTML)
+        if (num <= 0){
+            clearInterval(oTimer)
+            window.open('/')
+        } else {
+            num--
+            oB.innerHTML = num
+        }
+    }, 1000)
+</script>
+</body>
+</html>
